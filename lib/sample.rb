@@ -12,7 +12,7 @@ def translate(txt)
 		return ""
 	end
 
-	if "=" == txt[0]
+	if "=" == txt[0] &&  "=" == txt[-1]
 		# h1 タグの処理をする
 
 		# "= ho ge =".delete("= ")
