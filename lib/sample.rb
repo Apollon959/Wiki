@@ -14,6 +14,10 @@ def translate(txt)
 
 	if "=" == txt[0]
 		# h1 タグの処理をする
+
+		# "= ho ge =".delete("= ")
+		# => "hoge"
+        txt = txt.delete("= ")
 		return "<h1>#{txt}</h1>"
 	else
 		# p タグの処理をする
