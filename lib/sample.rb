@@ -12,13 +12,21 @@ def translate(txt)
 		return ""
 	end
 
-	if "=" == txt[0] &&  "=" == txt[-1]
-		# h1 タグの処理をする
+	if "=" == txt[0]
+		# h1 タグの処理を開始
 
-		# "= ho ge =".delete("= ")
-		# => "hoge"
-        txt = txt.delete("= ")
-		return "<h1>#{txt}</h1>"
+		if "=" == txt[-1]
+			# 正常
+
+			# "= ho ge =".delete("= ")
+			# => "hoge"
+        	txt = txt.delete("= ")
+			return "<h1>#{txt}</h1>"
+		else
+			# 異常
+			return txt # そのまま返す
+		end
+
 	else
 		# p タグの処理をする
 		return "<p>#{txt}</p>"
