@@ -13,4 +13,8 @@ describe "Sample" do
 	describe "空白のテスト" do
 		it {translate("").should eq("")}
 	end
+
+	describe "h1 タグがちゃんとつくかテスト" do
+		it {translate("= hoge =").should eq("<h1>hoge</h1>")}
+	end
 end
