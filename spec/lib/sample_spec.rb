@@ -17,4 +17,8 @@ describe "Sample" do
 	describe "h1 タグがちゃんとつくかテスト" do
 		it {translate("= hoge =").should eq("<h1>hoge</h1>")}
 	end
+
+	describe "失敗例： = が片方しか無いときは、タグをつけずに、そのまま返す" do
+		it {translate("= hoge").should eq("= hoge")}
+	end
 end
