@@ -11,6 +11,12 @@ def translate(txt)
 	if "" == txt
 		return ""
 	end
-		
-  	return "<p>#{txt}</p>"
+
+	if "=" == txt[0]
+		# h1 タグの処理をする
+		return "<h1>#{txt}</h1>"
+	else
+		# p タグの処理をする
+		return "<p>#{txt}</p>"
+	end
 end
